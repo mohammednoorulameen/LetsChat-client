@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import assets, { messagesDummyData } from "../../../../assets/assets";
 import { formatMassageTime, formatMassageDate } from "../../../../lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
+import { PhoneCall, Video } from "lucide-react";
 
 const ChatContainer = ({
   selectedUser,
@@ -39,21 +40,32 @@ const ChatContainer = ({
           <span className="w-2 h-2 rounded-full bg-green-500"></span>
         </div>
 
-        
+        {/* <img
+          src={assets.help_icon}
+          alt="icon"
+          className="max-md:hidden  max-w-5  cursor-pointer"
+        /> */}
+           <button
+
+        className="flex items-center gap-1 px-1 py-1  text-white rounded-full hover:bg-green-700 transition"
+      >
+        <PhoneCall size={18} />
+      </button>
+        {/* <img
+          src={assets.help_icon}
+          alt="icon"
+          className="  max-w-5  cursor-pointer"
+        /> */}
+        <button
+
+        className="flex items-center gap-2 px-4 py-2  text-white rounded-full hover:bg-green-700 transition"
+      >
+        <Video size={18} />
+      </button>
         <img
           src={assets.help_icon}
           alt="icon"
           className="max-md:hidden  max-w-5  cursor-pointer"
-        />
-        <img
-          src={assets.help_icon}
-          alt="icon"
-          className="  max-w-5  cursor-pointer"
-        />
-        <img
-          src={assets.help_icon}
-          alt="icon"
-          className="  max-w-5  cursor-pointer"
         />
         <img
           onClick={() => setSelectedUser(null)}
@@ -160,7 +172,10 @@ const ChatContainer = ({
     </div>
   ) : (
     <div className="flex flex-col items-center justify-center gap-2 text-gray-500 bg-white/10 max-md:hidden">
-      <img src={assets.logo_icon} alt="icon" className="max-w-16" />
+      {/* <img src={assets.logo_icon} alt="icon" className="max-w-16" /> */}
+      <h1 className="text-2xl font-extrabold bg-gradient-to-r from-purple-500 to-violet-700 text-transparent bg-clip-text">
+        Letschat
+      </h1>
       <p className="text-lg font-medium text-white">Chat anytime, any where</p>
     </div>
   );

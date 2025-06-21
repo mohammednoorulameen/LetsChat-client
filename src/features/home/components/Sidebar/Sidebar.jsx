@@ -1,7 +1,8 @@
 import React from "react";
 import assets, { userDummyData } from "../../../../assets/assets";
 import { useNavigate } from "react-router-dom";
-import { User, PhoneCall, MessageCircle, Settings } from "lucide-react";
+import BottomNavs from "../../../../Components/common/Layouts/BottomNavs";
+// import { User, PhoneCall, MessageCircle, Settings } from "lucide-react";
 
 const Sidebar = ({ selectedUser, setSelectedUser }) => {
   const navigate = useNavigate();
@@ -12,6 +13,8 @@ const Sidebar = ({ selectedUser, setSelectedUser }) => {
         selectedUser ? "max-md:hidden" : ""
       }`}
     >
+
+      
       <div className="p-5 rounded-r-xl">
         {/* Header and Search */}
         <div className="pb-5">
@@ -82,38 +85,7 @@ const Sidebar = ({ selectedUser, setSelectedUser }) => {
       </div>
 
       {/* Bottom Navigation Icons */}
-      <div className="mt-auto bg-[#282142]/40 py-0 px-0 flex justify-between items-center">
-        <button className="text-white hover:text-violet-400 w-full py-3">
-          {/* <img src={assets.avatar_icon} alt="Home" className="mx-auto w-6 h-6" /> */}
-          <User className="mx-auto w-6 h-6"/>
-        </button>
-
-        <button className="text-white hover:text-violet-400 w-full py-3">
-          {/* , , ,  */}
-          <PhoneCall className="mx-auto w-6 h-6 text-white"/>
-          {/* <img
-            src={assets.Call_Icons}
-            alt="Messages"
-            className="mx-auto w-6 h-6 text-white"
-          /> */}
-        </button>
-        <button className="text-white hover:text-violet-400 w-full py-3">
-            <MessageCircle className="mx-auto w-6 h-6"/>
-          {/* <img
-            src={assets.Chat_Icons}
-            alt="Settings"
-            className="mx-auto w-6 h-6"
-          /> */}
-        </button>
-         <button className="text-white hover:text-violet-400 w-full py-3">
-          <Settings className="mx-auto w-6 h-6"/>
-          {/* <img
-            src={assets.Settings_Icon}
-            alt="Settings"
-            className="mx-auto w-6 h-6"
-          /> */}
-        </button>
-      </div>
+     <BottomNavs/>
     </div>
   );
 };
