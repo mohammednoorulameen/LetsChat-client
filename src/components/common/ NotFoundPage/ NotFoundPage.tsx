@@ -25,7 +25,7 @@ const NotFoundPage: React.FC = () => {
         </h2>
 
         <p className="text-gray-400 mb-6">
-          The page you’re looking for doesn’t exist in Chat. Maybe you followed a broken link or mistyped the URL.
+          The page you’re looking for doesn’t exist in LetsChat. Maybe you followed a broken link or mistyped the URL.
         </p>
 
         <Link

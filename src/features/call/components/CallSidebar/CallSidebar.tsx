@@ -68,7 +68,7 @@ const CallSidebar: React.FC<CallSidebarProps> = ({ showSidebar, setShowSidebar }
       </nav>
 
       {/* Bottom Navigation */}
-      <div className="mt-auto pb-2">
+      <div className="mt-auto ">
         <BottomNavs />
       </div>
     </aside>
