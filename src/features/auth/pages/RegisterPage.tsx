@@ -1,19 +1,43 @@
-import React from 'react';
 import RegisterForm from '../components/RegisterForm/RegisterForm';
+import Logo from '../../../components/common/Logo/Logo';
 
-const RegisterPage: React.FC = () => {
+const RegisterPage = () => {
   return (
-    <div className="min-h-screen bg-cover bg-center flex items-center justify-center 
-      gap-8 sm:justify-evenly max-sm:flex-col backdrop-blur-2xl"
-    >
-      <div className="flex justify-center">
-        <h1 className="text-4xl font-extrabold bg-gradient-to-r from-purple-500 to-violet-700 text-transparent bg-clip-text">
-          Letschat
-        </h1>
+    <div className="min-h-screen w-screen bg-black px-4 py-10 flex flex-col items-center">
+      {/* Logo at the top */}
+      <div className="mb-6">
+        <Logo />
       </div>
-      <RegisterForm />
+
+      {/* Register form centered below logo */}
+      <div className="flex-grow flex items-center justify-center w-full max-w-md">
+        <RegisterForm />
+      </div>
     </div>
   );
 };
 
 export default RegisterPage;
+
+
+
+
+// import React from 'react';
+// import RegisterForm from '../components/RegisterForm/RegisterForm';
+// import Logo from '../../../components/common/Logo/Logo';
+
+
+// const RegisterPage: React.FC = () => {
+//   return (
+   
+
+//      <div className="min-h-screen bg-cover bg-center flex items-center justify-center backdrop-blur-2xl">
+//       <div className="flex flex-col items-center gap-2 max-w-md w-full p-4">
+//         <Logo />
+//         <RegisterForm />
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default RegisterPage;

@@ -1,4 +1,5 @@
 import  { lazy } from 'react';
+import ForgotPasswordPage from '../features/auth/pages/ForgotPasswordPage';
 // import { Navigate } from 'react-router-dom';
 // import { Toaster } from 'react-hot-toast';
 
@@ -34,6 +35,10 @@ const UserRouters = [
   {
     path: '/register',
     element: <RegisterPage />
+  },
+    {
+    path: '/forgotpassword',
+    element: <ForgotPasswordPage />
   },
   {
     path: '/',

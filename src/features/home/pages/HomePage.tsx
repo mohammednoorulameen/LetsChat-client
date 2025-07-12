@@ -10,7 +10,7 @@ const HomePage: React.FC = () => {
   const [showRightSidebar, setShowRightSidebar] = useState<boolean>(false);
 
   const [isDragging, setIsDragging] = useState<"left" | "right" | null>(null);
-  const [leftWidth, setLeftWidth] = useState<number>(520);
+  const [leftWidth, setLeftWidth] = useState<number>(430);
   const [rightWidth, setRightWidth] = useState<number>(300);
   const startXRef = useRef<number>(0);
   const startWidthRef = useRef<number>(0);
@@ -69,7 +69,12 @@ const HomePage: React.FC = () => {
   }, [isDragging, handleMouseMove, handleMouseUp]);
 
   return (
-    <div className="border w-full h-screen sm:px-[-1%] sm:py-[-1%]">
+    // <div className="border w-full h-screen sm:px-[-1%] sm:py-[-1%]">
+    <div
+  className={`border w-full h-screen sm:px-[-1%] sm:py-[-1%] ${
+    isDragging ? "select-none" : ""
+  }`}
+>
       <div
         className={`backdrop-blur-xl overflow-hidden h-[100%] grid grid-cols-1 relative
           ${
@@ -113,7 +118,7 @@ const HomePage: React.FC = () => {
               animate={{ width: rightWidth }}
               exit={{ width: 0 }}
               transition={{ duration: 0.2 }}
-              className="relative h-full overflow-hidden border-l border-gray-600"
+              // className="relative h-full overflow-hidden border-l border-gray-600"
             >
               <RightSidebar
                 selectedUser={selectedUser}
@@ -121,18 +126,18 @@ const HomePage: React.FC = () => {
                 onClose={() => setShowRightSidebar(false)}
               />
               {/* Drag handle */}
-              <div
+              {/* <div
                 onMouseDown={(e) => handleMouseDown(e, "right")}
                 className="absolute top-0 left-0 w-1 h-full cursor-col-resize z-50"
-              />
+              /> */}
             </motion.div>
           )}
         </AnimatePresence>
 
         {/* Overlay to show resize cursor */}
-        {isDragging && (
+        {/* {isDragging && (
           <div className="fixed inset-0 z-40 cursor-col-resize" />
-        )}
+        )} */}
       </div>
     </div>
   );
@@ -140,68 +145,4 @@ const HomePage: React.FC = () => {
 
 export default HomePage;
 
-
-// import Sidebar from "../components/Sidebar/Sidebar";
-// import ChatContainer from "../components/ChatContainer/ChatContainer";
-// import RightSidebar from "../components/RightSidebar/RightSidebar";
-// import { useState } from "react";
-// import { AnimatePresence } from "framer-motion";
-// import type { UserType } from '../home_types'
-
-
-// const HomePage: React.FC = () => {
-//   const [selectedUser, setSelectedUser] = useState<UserType | null>(null);
-//   const [showRightSidebar, setShowRightSidebar] = useState<boolean>(false);
-
-
-//   // drage Sidebar
-
-  
-
-//   return (
-//     <div className="border w-full h-screen sm:px-[-1%] sm:py-[-1%]">
-//       <div
-//         // className={`backdrop-blur-xl border-2 border-gray-600 rounded-2xl overflow-hidden
-//          className={`backdrop-blur-xl overflow-hidden
-//           h-[100%] grid grid-cols-1 relative
-//           ${
-//             selectedUser
-//               ? showRightSidebar
-//                 ? "md:grid-cols-[0.8fr_1.5fr_1fr]" // Show all three pages
-//                 : "md:grid-cols-[0.8fr_2.5fr]" // Only sidebar and chat
-//               : "md:grid-cols-2"
-//           }
-//         `}
-//       >
-//         {/* left sidebar */}
-//         <Sidebar
-//           selectedUser={selectedUser}
-//           setSelectedUser={setSelectedUser}
-//         />
-
-//         {/* chat container */}
-//         <AnimatePresence>
-//           <ChatContainer
-//             selectedUser={selectedUser}
-//             setSelectedUser={setSelectedUser}
-//             setShowRightSidebar={setShowRightSidebar}
-//           />
-//         </AnimatePresence>
-
-//         {/* right sidebar */}
-//         <AnimatePresence>
-//           {showRightSidebar && (
-//             <RightSidebar
-//               selectedUser={selectedUser}
-//               setSelectedUser={setSelectedUser}
-//               onClose={() => setShowRightSidebar(false)}
-//             />
-//           )}
-//         </AnimatePresence>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default HomePage;
 
