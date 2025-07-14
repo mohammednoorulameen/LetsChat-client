@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import assets, { messagesDummyData } from "../../../../assets/assets";
-import { formatMassageTime, formatMassageDate } from "../../../../lib/utils";
+import assets, { messagesDummyData } from "../../../../../assets/assets";
+import { formatMassageTime, formatMassageDate } from "../../../../../lib/utils";
 import { motion } from "framer-motion";
 import { PhoneCall, Video } from "lucide-react";
 import type { UserType,User,Message } from '../../home_types'

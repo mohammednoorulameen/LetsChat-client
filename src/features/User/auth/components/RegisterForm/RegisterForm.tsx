@@ -150,10 +150,11 @@ const LetsChatRegister = () => {
           )}
         </div>
 
-        {/* Submit Button */}
+        {/* Submit Button */} 
+        {/* bg-teal-600 */}
         <button
           type="submit"
-          className="w-full bg-teal-600 text-white font-medium py-2 rounded-md hover:bg-teal-700 transition"
+          className="w-full bg-violet-600 text-white font-medium py-2 rounded-md hover:bg-violet-700 transition"
         >
           REGISTER
         </button>
@@ -163,7 +164,7 @@ const LetsChatRegister = () => {
           Already have an account?{' '}
           <span
             onClick={() => navigate("/login")}
-            className="text-teal-500 hover:underline cursor-pointer"
+            className="text-violet-400 hover:underline cursor-pointer"
           >
             Login
           </span>

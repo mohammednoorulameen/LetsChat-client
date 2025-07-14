@@ -111,7 +111,7 @@ const StudentLogin = () => {
         <button
           type="submit"
           onClick={() => navigate('/')}
-          className="w-full bg-teal-600 text-white font-medium py-2 rounded-md hover:bg-teal-700 transition"
+          className="w-full bg-violet-600 text-white font-medium py-2 rounded-md hover:bg-violet-700 transition"
         >
           SUBMIT
         </button>

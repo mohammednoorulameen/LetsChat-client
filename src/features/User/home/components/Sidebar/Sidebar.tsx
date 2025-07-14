@@ -1,7 +1,7 @@
 import React from "react";
-import assets, { userDummyData } from "../../../../assets/assets";
+import assets, { userDummyData } from "../../../../../assets/assets";
 import { useNavigate } from "react-router-dom";
-import BottomNavs from "../../../../components/common/Layouts/BottomNavs";
+import BottomNavs from "../../../../../components/common/Layouts/BottomNavs";
 import type{ UserType } from '../../home_types'
 // import { User, PhoneCall, MessageCircle, Settings } from "lucide-react";
 

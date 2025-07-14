@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import assets, { imagesDummyData } from "../../../../assets/assets";
+import assets, { imagesDummyData } from "../../../../../assets/assets";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface RightSidebarProps {

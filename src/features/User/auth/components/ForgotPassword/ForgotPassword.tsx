@@ -124,7 +124,7 @@ const ForgotPassword = () => {
 
          <button
           onClick={() => handleSubmit()}
-          className="w-full bg-teal-600 hover:bg-teal-700 text-white py-3 text-lg font-medium rounded"
+          className="w-full bg-violet-600 hover:bg-violet-700 text-white py-3 text-lg font-medium rounded"
           disabled={code.join("").length !== 6}
         >
           SUBMIT
@@ -135,7 +135,7 @@ const ForgotPassword = () => {
           {timeLeft > 0 ? (
             <span className="text-gray-400">Resend OTP in {timeLeft} seconds</span>
           ) : (
-            <button onClick={handleResendOTP} className="text-teal-500 hover:text-teal-400 cursor-pointer">
+            <button onClick={handleResendOTP} className="text-violet-500 hover:text-violet-400 cursor-pointer">
               Resend OTP
             </button>
           )}

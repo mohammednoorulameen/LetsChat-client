@@ -3,7 +3,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { FaUser, FaPlus, FaSearch } from "react-icons/fa";
-import BottomNavs from "../../../../components/common/Layouts/BottomNavs";
+import BottomNavs from "../../../../../components/common/Layouts/BottomNavs";
 
 interface CallSidebarProps {
   showSidebar: boolean;

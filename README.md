@@ -52,3 +52,81 @@ export default tseslint.config({
   },
 })
 ```
+
+
+
+<!-- -------------------------------------------------------------------------------------- -->
+
+
+<!-- 
+src/
+├── assets/                      # Static assets (images, icons, fonts)
+│
+├── components/                  # Global reusable UI components
+│   ├── common/                  # Atomic components (Button, Input, Avatar, etc.)
+│   ├── layout/                  # App shell layouts (Sidebar, Header, Drawer, etc.)
+│   └── modal/                   # Modal components (ConfirmModal, ChatCreateModal, etc.)
+│
+├── features/                    # Feature-driven modular domain separation
+│   ├── shared/                  # Shared between user and admin
+│   │   ├── auth/                # Login, signup, JWT, OTP, forgot password
+│   │   │   ├── components/
+│   │   │   ├── hooks/
+│   │   │   ├── slices/
+│   │   │   └── services/
+│   │   ├── settings/           # Profile settings, theme, privacy
+│   │   ├── notifications/      # Toasts, push notifications
+│   │   └── chat/               # Core chat logic (used in both sides if needed)
+│   │       ├── components/
+│   │       ├── hooks/
+│   │       ├── slices/
+│   │       └── services/
+│
+│   ├── user/                    # User-specific features
+│   │   ├── home/                # Home screen, recent chats
+│   │   ├── chatbox/             # Chat UI (messages, input, file sharing)
+│   │   ├── group/               # Group creation, members, permissions
+│   │   └── call/                # Call UI (video/audio, ringing)
+│
+│   └── admin/                   # Admin-specific features
+│       ├── dashboard/           # Chat stats, activity logs
+│       ├── userManagement/      # Manage user list, ban/block
+│       ├── chatMonitoring/      # Read-only view of chats
+│       └── reports/             # Flagged chats or user reports
+│
+├── routes/                      # Routing setup
+│   ├── AppRouter.jsx            # Top-level routes
+│   ├── UserRouter.jsx           # User routes
+│   ├── AdminRouter.jsx          # Admin routes
+│   ├── ProtectedRoute.jsx       # Auth guard
+│   └── RoleBasedRoute.jsx       # Role-based route control
+│
+├── store/                       # Redux store config
+│   ├── index.js
+│   ├── slices/                  # Global slices (if any)
+│   └── middleware/              # Custom middlewares (e.g., socket)
+│
+├── services/                    # External logic
+│   ├── socket.js                # Socket.IO client config
+│   ├── api.js                   # Axios or RTK Query base API
+│   └── firebase.js              # If using Firebase for file upload/notifications
+│
+├── lib/                         # Global utilities
+│   ├── axiosInstance.js
+│   ├── authUtils.js             # JWT handling, token refresh, etc.
+│   └── validators.js            # Form/input validation
+│
+├── hooks/                       # Global custom hooks
+│   └── useSocket.js             # Manage socket connections
+│
+├── context/                     # React context (Theme, AuthContext)
+│
+├── types/                       # Global TypeScript types / interfaces
+│
+├── i18n/                        # Language localization files
+│
+├── tests/                       # Unit & integration tests
+│
+├── App.jsx                      # Root app component
+├── main.jsx                     # ReactDOM entry
+└── index.css / tailwind.css     # Styling setup -->

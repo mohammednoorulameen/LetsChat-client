@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import BottomNavs from "../../../../components/common/Layouts/BottomNavs";
+import BottomNavs from "../../../../../components/common/Layouts/BottomNavs";
 import {
   FaUser,
   FaLock,
