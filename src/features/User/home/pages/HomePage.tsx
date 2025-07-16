@@ -21,18 +21,7 @@ const HomePage: React.FC = () => {
     startWidthRef.current = type === "left" ? leftWidth : rightWidth;
   };
 
-  // const handleMouseMove = useCallback(
-  //   (e: MouseEvent) => {
-  //     if (!isDragging) return;
-  //     const delta = e.clientX - startXRef.current;
-  //     if (isDragging === "left") {
-  //       setLeftWidth(Math.max(240, startWidthRef.current + delta));
-  //     } else {
-  //       setRightWidth(Math.max(240, startWidthRef.current - delta));
-  //     }
-  //   },
-  //   [isDragging]
-  // );
+  
 
   const handleMouseMove = useCallback(
   (e: MouseEvent) => {
@@ -125,19 +114,11 @@ const HomePage: React.FC = () => {
                 setSelectedUser={setSelectedUser}
                 onClose={() => setShowRightSidebar(false)}
               />
-              {/* Drag handle */}
-              {/* <div
-                onMouseDown={(e) => handleMouseDown(e, "right")}
-                className="absolute top-0 left-0 w-1 h-full cursor-col-resize z-50"
-              /> */}
+
             </motion.div>
           )}
         </AnimatePresence>
-
-        {/* Overlay to show resize cursor */}
-        {/* {isDragging && (
-          <div className="fixed inset-0 z-40 cursor-col-resize" />
-        )} */}
+       
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ const MainRoutes: React.FC = () => {
   const routes = useRoutes(userRoutes);
 
   return (
-    <div className="bg-black min-h-screen">
+    <div className="bg-black ">
       <Toaster />
       {/* <Suspense fallback={<DelayedFallback />}> */}
       <Suspense fallback={<DelayedFallback />}>
