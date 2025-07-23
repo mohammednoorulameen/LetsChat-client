@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+
 import assets, { imagesDummyData } from "../../../../../assets/assets";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 interface RightSidebarProps {
   selectedUser: any; // Changed from boolean to `any` because you’re using `selectedUser.fullName`, `selectedUser.bio`, etc.
@@ -10,7 +10,7 @@ setSelectedUser: React.Dispatch<React.SetStateAction<any>>;
 
 
 
-const RightSidebar:React.FC <RightSidebarProps>= ({ selectedUser,setSelectedUser, onClose }) => {
+const RightSidebar:React.FC <RightSidebarProps>= ({ selectedUser, onClose }) => {
   return (
     selectedUser && (
       // <div
